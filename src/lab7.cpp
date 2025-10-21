@@ -1,3 +1,12 @@
+/**
+ * Name: Jack Williamson
+ * KUID: 3178213
+ * Lab session: Th 4pm
+ * Lab assignment number: Lab 07
+ * Description: Finds the transitive closure of a zero-one matrix using the given formula
+ * Collaborators: None
+ * Outside sources: Class notes, StackOverflow, Wikipedia, cppreference.com
+ */
 #include <iostream>
 #include <vector>
 
