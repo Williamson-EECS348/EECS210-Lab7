@@ -56,8 +56,21 @@ void Matrix::getMatrix() {
             // so that we still get the correct number of rows
             i--;
         } else {
-            // if the length is the same then add the row_t to the matrix
-            mat.push_back(items);
+            // if any of the input are not numbers (e.g. user inputs letters) then we tell them to try again
+            bool invalidInput = false;
+            for (auto item : items) {
+                if (item != 0 && item != 1) {
+                    invalidInput = true;
+                    break;
+                }
+            }
+            if (invalidInput) {
+                std::cerr << "ERROR: invalid input detected! Only 0s and 1s are allowed. Try again:" << std::endl;
+                i--;
+            } else {
+                // if the length is the same then add the row_t to the matrix
+                mat.push_back(items);
+            }
         }
     }
 }
